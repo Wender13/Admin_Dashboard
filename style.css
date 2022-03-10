@@ -23,7 +23,12 @@ span {
     justify-items: baseline;
 }
 
-aside {
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 80%;
     color: white;
     background: #18181b;
     padding: 16px;
@@ -42,8 +47,27 @@ header {
     flex-wrap: wrap;
 }
 
-main {
+main, aside {
     padding: 16px;
+}
+
+main {
+    grid-area: 3 / 2 / 6 / 5;
+}
+
+#Main {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+section > p {
+    font-size: .85em;
+}
+
+aside {
+    grid-area: 3 / 5 / 6 / 6;
 }
 
 h1 {
@@ -52,6 +76,18 @@ h1 {
 
 h2 {
     font-size: 1.3em;
+}
+
+main > h2 { 
+    margin-bottom: 16px;
+}
+
+aside > h2 {
+    margin-bottom: 16px;
+}
+
+section > h2 {
+    margin-bottom: 8px;
 }
 
 li {
@@ -74,6 +110,9 @@ input {
 
 img {
     cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 svg {
@@ -101,7 +140,6 @@ svg {
 #User_Image {
     width: 36px;
     height: 36px;
-    border-radius: 50%;
 }
 
 #User_Name {
@@ -117,7 +155,6 @@ svg {
 #User_Image_Big {
     width: 90px;
     height: 90px;
-    border-radius: 50%;
 }
 
 #Compliment_UserName {
@@ -155,4 +192,51 @@ button:active {
     position: relative;
     top: 2px;
     left: 2px;
+}
+
+.Projects {
+    padding: 16px;
+    height: 37vh;
+    background: #f4f4f5;
+    border-radius: 10px;
+    border-left: 10px solid #52525b;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.575);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.Svgs {
+    align-self: flex-end;
+}
+
+#Announcements {
+    background-color: #f4f4f5;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+#Announcements > h3 {
+    font-size: 1em;
+    margin-top: 16px;
+}
+
+#Announcements > p {
+    margin-bottom: 16px;
+}
+
+#Trending {
+    background: #f4f4f5;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.User {
+    font-weight: 600;
+    font-size: 1.2em;
 }
