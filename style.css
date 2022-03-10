@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    background: #a1a1aa;
     display: grid;
-    grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+    grid-template: repeat(5, 1fr)/repeat(5, 1fr);
 }
 
 span {
@@ -18,16 +25,33 @@ span {
 
 aside {
     color: white;
-    background: #0085D5;
+    background: #18181b;
     padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 32px;
-    grid-area: 1 / 1 / 6 / 2 ;
+    grid-area: 1 / 1 / 6 / 2;
+}
+
+header {
+    background: #f4f4f5;
+    padding: 16px 32px;
+    grid-area: 1 / 2 / 3 / 6;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main {
+    padding: 16px;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.3em;
 }
 
 li {
@@ -39,18 +63,96 @@ li {
 a {
     color: white;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 700;
 }
 
-header {
-    padding: 16px;
+input {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+img {
+    cursor: pointer;
+}
+
+svg {
+    cursor: pointer;
 }
 
 #Search {
-    background: rgb(225, 225, 225);
+    background: #a1a1aa;
     border: none;
     border-radius: 26px;
     height: 32px;
     width: 30vw;
+}
+
+#Left {
+    width: 70%;
+}
+
+#Right {
+    width: 30%;
+    display: flex;
+    gap: 26px;
+}
+
+#User_Image {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+#User_Name {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+#Left_Bottom {
+    display: flex;
+    align-items: center;
+}
+
+#User_Image_Big {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+#Compliment_UserName {
+    font-weight: 500;
+}
+
+#Compliment {
+    font-size: 1.1em;
+}
+
+#User_Name_Big {
+    font-size: 1.5em;
+}
+
+#Right_Bottom {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    color: white;
+    background: #18181b;
+    font-size: 1.2em;
+    width: 7vw;
+    height: 6vh;
+    border-radius: 20px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
 }
